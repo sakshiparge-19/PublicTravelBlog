@@ -256,7 +256,6 @@ margin: 30px;
 
 /* HERO */
  .hero-section { 
-
  background: url('assects/image1.png') no-repeat center center;
   background-size: cover;     
   background-attachment: fixed;
@@ -339,232 +338,7 @@ margin: 30px;
 } 
 
 /* <<<<<<<<<<<<<<<<<<sakshi>>>>>>>>>>>> */
-::before, *::after {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      background-color: #d58282; /* dusty pink background */
-       color: #222; 
-       line-height: 1.5; 
-     }  
 
-    /* Container for entire content with white background */
-     .container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      background: #fff;
-      padding: 1.5rem;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-    } 
-
-    /* Left sidebar */
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .about-me {
-      background-color: #bed9f7;
-      padding: 1rem 1rem 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: inset 0 0 14px rgb(0 0 0 / 0.07);
-    }
-    .about-me h2 {
-      margin: 0 0 0.8rem;
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #111;
-    }
-    .profile-pic {
-      width: 110px;
-      height: 110px;
-      margin: 0 auto 1rem;
-      border-radius: 50%;
-      background-color: #fff;
-      box-shadow: 0 0 0 3px #bed9f7;
-    }
-
-    .about-me p {
-      font-size: 0.9rem;
-      margin-bottom: 1rem; 
-       color: #1f2937;
-      font-weight: 500;
-    }
-    .about-me button {
-      background-color: #2c6bed;
-      border: none;
-      color: white;
-      padding: 0.5rem 1.4rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .about-me button:hover,
-    .about-me button:focus {
-      background-color: #1f4fc8;
-      outline: none;
-    } 
-
-    /* Social link box */
-    .social-link {
-      background-color: #4577d9;
-      padding: 1rem 1rem 1.5rem;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: inset 0 0 11px rgb(0 0 0 / 0.12);
-      color: #fff;
-    }
-    .social-link h2 {
-      margin: 0 0 0.8rem;
-      font-weight: 700;
-      font-size: 1.3rem;
-      letter-spacing: 0.01em;
-    }
-    .social-link p {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    Social icons container */
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 0.9rem;
-    } 
-    /* Social link icons as SVG inline or icons from font */
-     .social-icons a {
-      background: rgba(255 255 255 / 0.25);
-      color: white;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-      width: 34px;
-      height: 34px;
-      font-size: 0;
-      transition: background-color 0.3s ease;
-    }
-    .social-icons a:hover,
-    .social-icons a:focus {
-      background-color: #2c4a99;
-      outline: none;
-    }
-
-    /* Placeholder for icons - using Unicode for demo: just to keep clean HTML and CSS */
-     .social-icons a.facebook::before {
-      content: "f";
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: 20px;
-      color: white;
-    }
-    .social-icons a.instagram::before {
-      content: "📷";
-      font-size: 18px;
-    }
-    .social-icons a.youtube::before {
-      content: "▶";
-      font-size: 18px; 
-     } 
-     .social-icons a.linkedin::before {
-      content: "in";
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .social-icons a.twitter::before {
-      content: "t";
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      font-size: 20px;
-    }  
-
-    /* Right content area */
-    .content {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.3rem;
-    } 
-
-    /* Latest article section heading (only top left) */
-     .content > h3 {
-      grid-column: 1 / -1;
-      margin: 0 0 0.9rem;
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: #111;
-    } 
-
-    /* Each article card */
-    article {
-      display: flex;
-      flex-direction: column;
-      gap: 0.45rem;
-    }
-
-    article img {
-      width: 100%;
-      border-radius: 7px;
-      object-fit: cover;
-      aspect-ratio: 16 / 9;
-      box-shadow: 0 1px 4px rgb(0 0 0 / 0.12);
-      background-color: #e0e7ff;
-    }
-    article .category {
-      font-size: 0.7rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #7893b0; 
-    } 
-    article h4 {
-      margin: 0.1rem 0 0.3rem;
-      font-weight: 700;
-      font-size: 1rem;
-      color: #111;
-      cursor: default; 
-    }
-    article p {
-      font-size: 0.85rem;
-      margin: 0;
-      color: #555d6e;
-      line-height: 1.3;
-    } 
-
-     
-
-    /* Responsive */
-    @media (max-width: 800px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-      .content {
-        grid-template-columns: 1fr 1fr;
-      }
-      .content > h3 {
-        font-size: 1.3rem;
-      }
-    }
-    @media (max-width: 480px) {
-      .content {
-        grid-template-columns: 1fr;
-      }
-      .about-me button {
-        width: 100%;
-      }
-    }
    
 
 
@@ -666,7 +440,22 @@ body {
       margin-bottom: 10px;
     }
   }
-
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<asmita>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+ /* .hero-sectionforest{ 
+ background: url('assects/forest.png') no-repeat center center;
+  background-size: cover;     
+  background-attachment: fixed;
+  position: relative;
+  height: 100vh; 
+  width: 100vw;             
+  margin: 0;
+  padding: 0;
+  
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3) */
    /* vaneshri */
   /* this is the forest middle parts css */
 
@@ -950,7 +739,7 @@ body {
   /* main page middle featured article part  */
 
 
-  }
+  
 
    body {
       font-family: Arial, sans-serif;
