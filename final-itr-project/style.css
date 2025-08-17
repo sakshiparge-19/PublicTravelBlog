@@ -337,12 +337,8 @@ margin: 30px;
       
 } 
 
-/* <<<<<<<<<<<<<<<<<<sakshi>>>>>>>>>>>> */
 
-   
-
-
-/* vaneshri*/
+  /* vaneshri*/
 
 body {
     font-family: Arial, sans-serif;
@@ -357,7 +353,8 @@ body {
   h2 {
     font-weight: 700;
     margin-bottom: 15px;
-    margin: 0;
+    margin: 10px;
+  
   }
   .articles-section {
     margin-bottom: 40px;
@@ -370,6 +367,9 @@ body {
     padding: 12px;
     box-shadow: 0 0 7px rgba(0,0,0,0.05);
     background: #fff;
+    height:250px;
+    weight:500px;
+
   }
   .article-image {
     flex: 0 0 200px;
@@ -380,6 +380,8 @@ body {
     padding: 0%;
     background: #eee;
     box-shadow: inset 0 0 5px #ccc;
+    width:100%;
+    height:100%
   }
   .article-image img {
     display: block;
@@ -393,12 +395,13 @@ body {
     flex: 1;
   }
   .category {
-    font-size: 0.75rem;
+    font-size: 0.79rem;
     font-weight: 600;
     color: #777;
     text-transform: uppercase;
     margin-bottom: 6px;
     letter-spacing: 0.05em;
+    
     
   }
   .title {
@@ -413,9 +416,10 @@ body {
     margin-bottom: 10px;
   }
   .description {
-    font-size: 0.9rem;
+    font-size: 1;
     color: #444;
-  }
+    font-style: normal;
+      }
   button.load-more {
     background-color: #4a7edc;
     color: white;
@@ -440,8 +444,156 @@ body {
       margin-bottom: 10px;
     }
   }
+  
+/* Newsletter Section */
+.newsletter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4a90e2;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  margin: 40px;
+  height: 300px;
+}
+
+.newsletter p {
+  font-size: 23px;
+  color: #fff;
+}
+
+.newsletter h1 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.subscribe {
+  display: flex;
+  margin-top: 15px;
+}
+
+.subscribe input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 328px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.subscribe input::placeholder {
+  color: #fff;
+}
+
+.subscribe button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.3); /* ✅ cleaned */
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  width: 150px;
+}
+
+.travel-img img {
+  width: 300px;
+  height: 150px; /* ✅ fixed */
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+.footer p {
+  font-size: 19px; /* ✅ fixed */
+}
+
+.footer-bottom p {
+  font-size: 20px;
+  margin: 10px;
+}
+.footer-bottom span{
+  color: #0066cc;
+}
+
+.footer-top {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  margin: 20px 0;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #555;
+  font-size: 15px;
+}
+
+.footer-links a:hover {
+  color: #000;
+}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  margin: 30px;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 16px;
+}
+
+.social-icons a:hover {
+  background: #f0f0f0;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #777;
+  padding: 20px;
+}
+
+.footer-bottom span {
+  font-weight: bold;
+  color: #0066cc;
+}
+
+
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<asmita>>>>>>>>>>>>>>>>>>>>>>>>>>> */
- /* .hero-sectionforest{ 
+ .hero-sectionforest{ 
  background: url('assects/forest.png') no-repeat center center;
   background-size: cover;     
   background-attachment: fixed;
@@ -455,7 +607,8 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.3) */
+  background: rgba(0,0,0,0.3) 
+
    /* vaneshri */
   /* this is the forest middle parts css */
 
@@ -524,6 +677,7 @@ body {
   .description {
     font-size: 0.9rem;
     color: #444;
+    font-family: sans-serif;
   }
   button.load-more {
     background-color: #4a7edc;
@@ -735,66 +889,4 @@ body {
   }
 
   
-  /* vaneshri */
-  /* main page middle featured article part  */
-
-
   
-
-   body {
-      font-family: Arial, sans-serif;
-      margin: 0%;
-      padding: 0%;
-      background: #fff;
-      
-      
-      
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    /* Grid layout */
-    .box {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      padding: 20px;
-      margin:0 auto;
-      max-width: 1300;
-      
-    }
-
-    .card {
-      border-radius: 12px;
-      overflow: hidden;
-      
-    }
-
-    .card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;  
-      
-      display: block;
-      
-    }
-
-    /* Make right card big */
-    .big {
-      grid-row: span 2;
-     
-    }
-
-    /* Mobile responsive */
-    @media (max-width: 700px) {
-      .box {
-        grid-template-columns: 1fr;
-      }
-      .big {
-        grid-row: auto;
-        
-      }
-    }
