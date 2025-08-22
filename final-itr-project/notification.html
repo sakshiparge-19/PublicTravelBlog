@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 330px;
+      background: white;
+     height: 600px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .header {
+      background: #3578e5; 
+      color: white;
+      padding: 25px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 25px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .notification {
+      padding: 25px;
+      border-bottom: 1px solid #ddd;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .notification small {
+      display: block;
+      color: gray;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    .notification:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Notifications</div>
+    
+    <div class="notification">
+      New comment on "Uttarakhand: foothills of the Himalayas".
+      <small>2 days ago</small>
+    </div>
+
+    <div class="notification">
+      Sakshi Parge Joined your Community.
+      <small>2 days ago</small>
+    </div>
+
+    <div class="notification">
+      Sakshi Parge Joined your Community.
+      <small>2 days ago</small>
+    </div>
+
+    <div class="notification">
+      New comment on "Mahabalipuram: World Heritage Site".
+      <small>2 days ago</small>
+    </div>
+  </div>
+</body>
+</html>
