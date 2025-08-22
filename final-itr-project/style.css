@@ -12,6 +12,122 @@ html,body {
   background-size: cover;
 }
 
+<<<<<<< HEAD
+=======
+
+    .profile-card {
+    width: 500px;
+    height: 850PX;
+    margin: 20px auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* hidden by default */
+    z-index: 1000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    line-height: 25px;
+}
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        background: #ccc;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+p {
+        margin: 10px 0 5px 0;
+        font-size: 20px;
+        color: #0b0b0b;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        background: #655f5f;
+        margin: 15px 0;
+    }
+
+    .follow-me p{
+        /* margin-bottom: 2px; */
+        padding-left: 2px;
+        font-weight: bold;
+        display: flex;
+        align-items: start;
+        justify-content: left;
+        color: #878181;
+        font-size: 25px;
+
+    }
+
+   /* CSS */
+.icons {
+  display: flex;
+  /* align-items: start; */
+  justify-content: right;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+}
+
+.icons a {
+  padding: 0px 0px;
+}
+.icons img {
+  /* display: block;    */
+  width: 38px;
+  height: 38px;
+}
+
+  .category-title { 
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 20px ;
+        color: #696565;
+        font-size: 25px;
+        padding: 3px; 
+      
+    } 
+
+    .category-btn {
+        /* display: block; */
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #3e3737;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        background: white;
+        cursor: pointer;
+        text-align: left;
+        font-size: medium;
+    }
+
+    .category-btn:hover {
+        background: #f2f2f2;
+    }
+
+>>>>>>> b5c6eb65df7778e75a9d0e3bc629e520b173ce87
 /* NAVBAR */
 .navbar { 
  position: absolute;
@@ -71,7 +187,7 @@ font-family: 'Times New Roman', Times, serif;
   font-size: 15px;
   cursor: pointer;
   height: 45px;
-  width: 40%;
+  width: 45%;
   margin-left: 200px;
 }
 /* SEARCH BAR */
@@ -131,8 +247,7 @@ margin: 10px;
      color: #ffffff;
     font-size: 80px;
   
- }   
-
+ }
 
 /* HERO */
  .hero-section { 
@@ -209,8 +324,452 @@ margin: 10px;
     height: 200px; 
       
 } 
+<<<<<<< HEAD
 .container {
     
+=======
+
+  
+
+<<<<<<< HEAD
+
+  /* vaneshri*/
+=======
+/* vaneshri*/
+>>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin:0%;
+    padding:0;
+    color: #333;
+    max-width: 1500px;
+   
+    line-height: 1.5;
+  }
+  h2 {
+    font-weight: 800;
+    margin-bottom: 15px;
+<<<<<<< HEAD
+    margin: 20px;
+    
+  
+=======
+    margin: 0;
+>>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+  }
+  .articles-section {
+    margin-bottom: 40px;
+  }
+  .article-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 12px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.05);
+    background: #fff;
+<<<<<<< HEAD
+    height:250px;
+    margin: 30px;
+
+=======
+>>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+  }
+  .article-image {
+    flex: 0 0 200px;
+    height: 220px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 15px;
+    padding: 0;
+    background: #eee;
+    box-shadow: inset 0 0 5px #ccc;
+<<<<<<< HEAD
+    width:100%;
+    
+=======
+>>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+  }
+  .article-image img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin: 0;
+    object-fit: cover;
+    
+  }
+  .article-content {
+    flex: 1;
+  }
+  .category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+    
+  }
+  .title {
+    font-weight: 880;
+    margin: 0 0 8px 0;
+    font-size: large;
+    
+  }
+  .author-date {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 0.9rem;
+    color: #444;
+<<<<<<< HEAD
+    font-size: larger;
+    margin: 50px;
+      }
+=======
+  }
+>>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+  button.load-more {
+    background-color: #4a7edc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  button.load-more:hover {
+    background-color: #3b66bd;
+  }
+  @media (max-width: 600px) {
+    .article-card {
+      flex-direction: column;
+    }
+    .article-image {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<asmita>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+ /* .hero-sectionforest{ 
+ background: url('assects/forest.png') no-repeat center center;
+  background-size: cover;     
+  background-attachment: fixed;
+  position: relative;
+  height: 100vh; 
+  width: 100vw;             
+  margin: 0;
+  padding: 0;
+  
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+<<<<<<< HEAD
+  background: rgba(0,0,0,0.3) 
+}
+
+=======
+  background: rgba(0,0,0,0.3) */
+>>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+   /* vaneshri */
+  /* this is the forest middle parts css */
+
+   body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 20px;
+    color: #333;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    margin: 0%;
+  }
+  h2 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin: 10px;
+  }
+  .articles-section {
+    margin-bottom: 40px;
+  }
+  .article-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 12px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.05);
+    background: #fff;
+  }
+  .article-image {
+    flex: 0 0 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 15px;
+    background: #eee;
+    box-shadow: inset 0 0 5px #ccc;
+  }
+  .article-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .article-content {
+    flex: 1;
+  }
+  .category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+  .title {
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+  }
+  .author-date {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 0.9rem;
+    color: #444;
+  }
+  button.load-more {
+    background-color: #4a7edc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  button.load-more:hover {
+    background-color: #3b66bd;
+  }
+  @media (max-width: 600px) {
+    .article-card {
+      flex-direction: column;
+    }
+    .article-image {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  /* vaneshri */
+  /* this is the middle part of forest page */
+   body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 20px;
+    color: #333;
+    max-width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+  }
+  h2 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin: 10px;
+  }
+  .articles-section {
+    margin-bottom: 40px;
+  }
+  .article-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 12px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.05);
+    background: #fff;
+  }
+  .article-image {
+    flex: 0 0 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 15px;
+    background: #eee;
+    box-shadow: inset 0 0 5px #ccc;
+  }
+  .article-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .article-content {
+    flex: 1;
+  }
+  .category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+  .title {
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+  }
+  .author-date {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 0.9rem;
+    color: #444;
+  }
+  button.load-more {
+    background-color: #4a7edc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button.load-more:hover {
+    background-color: #3b66bd;
+  }
+  @media (max-width: 600px) {
+    .article-card {
+      flex-direction: column;
+    }
+    .article-image {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  /* vaneshri */
+  /* this is the middle part of camping page */
+  body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    margin: 20px;
+    color: #333;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    margin: 0%;
+  }
+  h2 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin: 10px;
+  }
+  .articles-section {
+    margin-bottom: 40px;
+  }
+  .article-card {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 12px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.05);
+    background: #fff;
+  }
+  .article-image {
+    flex: 0 0 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 15px;
+    background: #eee;
+    box-shadow: inset 0 0 5px #ccc;
+  }
+  .article-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .article-content {
+    flex: 1;
+  }
+  .category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+  }
+  .title {
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+  }
+  .author-date {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 10px;
+  }
+  .description {
+    font-size: 0.9rem;
+    color: #444;
+  }
+  button.load-more {
+    background-color: #4a7edc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button.load-more:hover {
+    background-color: #3b66bd;
+  }
+  @media (max-width: 600px) {
+    .article-card {
+      flex-direction: column;
+    }
+    .article-image {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  
+  /* vaneshri */
+  /* main page middle featured article part  */
+
+
+  
+
+   body {
+      font-family: Arial, sans-serif;
+      margin: 0%;
+      padding: 0%;
+>>>>>>> b5c6eb65df7778e75a9d0e3bc629e520b173ce87
       background: #fff;
       
     }
