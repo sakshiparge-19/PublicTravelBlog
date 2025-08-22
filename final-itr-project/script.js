@@ -1,7 +1,5 @@
 
-// function closeCard() {
-//     document.getElementById("profileCard").style.display = "none";
-// }
+
 
 function toggleProfileCard() {
     let card = document.getElementById("profileCard");
