@@ -12,122 +12,6 @@ html,body {
   background-size: cover;
 }
 
-<<<<<<< HEAD
-=======
-
-    .profile-card {
-    width: 500px;
-    height: 850PX;
-    margin: 20px auto;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    padding: 20px;
-    text-align: center;
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none; /* hidden by default */
-    z-index: 1000;
-}
-
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #007bff;
-    color: white;
-    font-weight: bold;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    line-height: 25px;
-}
-
-    .profile-pic {
-        width: 200px;
-        height: 200px;
-        background: #ccc;
-        border-radius: 50%;
-        margin: 0 auto;
-    }
-p {
-        margin: 10px 0 5px 0;
-        font-size: 20px;
-        color: #0b0b0b;
-    }
-
-    hr {
-        border: none;
-        height: 2px;
-        background: #655f5f;
-        margin: 15px 0;
-    }
-
-    .follow-me p{
-        /* margin-bottom: 2px; */
-        padding-left: 2px;
-        font-weight: bold;
-        display: flex;
-        align-items: start;
-        justify-content: left;
-        color: #878181;
-        font-size: 25px;
-
-    }
-
-   /* CSS */
-.icons {
-  display: flex;
-  /* align-items: start; */
-  justify-content: right;
-  margin-top: 2px;
-  margin-bottom: 2px;
-
-}
-
-.icons a {
-  padding: 0px 0px;
-}
-.icons img {
-  /* display: block;    */
-  width: 38px;
-  height: 38px;
-}
-
-  .category-title { 
-        font-weight: bold;
-        text-align: left;
-        margin-bottom: 20px ;
-        color: #696565;
-        font-size: 25px;
-        padding: 3px; 
-      
-    } 
-
-    .category-btn {
-        /* display: block; */
-        width: 100%;
-        padding: 10px;
-        border: 2px solid #3e3737;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        background: white;
-        cursor: pointer;
-        text-align: left;
-        font-size: medium;
-    }
-
-    .category-btn:hover {
-        background: #f2f2f2;
-    }
-
->>>>>>> b5c6eb65df7778e75a9d0e3bc629e520b173ce87
 /* NAVBAR */
 .navbar { 
  position: absolute;
@@ -324,19 +208,15 @@ margin: 10px;
     height: 200px; 
       
 } 
-<<<<<<< HEAD
+HEAD
 .container {
     
-=======
+
 
   
 
-<<<<<<< HEAD
 
   /* vaneshri*/
-=======
-/* vaneshri*/
->>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
 
 body {
     font-family: Arial, sans-serif;
@@ -351,13 +231,12 @@ body {
   h2 {
     font-weight: 800;
     margin-bottom: 15px;
-<<<<<<< HEAD
+
     margin: 20px;
     
-  
-=======
+
     margin: 0;
->>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+
   }
   .articles-section {
     margin-bottom: 40px;
@@ -370,12 +249,9 @@ body {
     padding: 12px;
     box-shadow: 0 0 7px rgba(0,0,0,0.05);
     background: #fff;
-<<<<<<< HEAD
     height:250px;
     margin: 30px;
 
-=======
->>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
   }
   .article-image {
     flex: 0 0 200px;
@@ -386,11 +262,10 @@ body {
     padding: 0;
     background: #eee;
     box-shadow: inset 0 0 5px #ccc;
-<<<<<<< HEAD
     width:100%;
     
-=======
->>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+
+
   }
   .article-image img {
     display: block;
@@ -427,13 +302,13 @@ body {
   .description {
     font-size: 0.9rem;
     color: #444;
-<<<<<<< HEAD
+
     font-size: larger;
     margin: 50px;
       }
-=======
+
   }
->>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+
   button.load-more {
     background-color: #4a7edc;
     color: white;
@@ -479,7 +354,7 @@ body {
 
 =======
   background: rgba(0,0,0,0.3) */
->>>>>>> fab05f4e08e2199b96975e7a0469ea679273eb8e
+
    /* vaneshri */
   /* this is the forest middle parts css */
 
@@ -769,7 +644,7 @@ body {
       font-family: Arial, sans-serif;
       margin: 0%;
       padding: 0%;
->>>>>>> b5c6eb65df7778e75a9d0e3bc629e520b173ce87
+
       background: #fff;
       
     }
