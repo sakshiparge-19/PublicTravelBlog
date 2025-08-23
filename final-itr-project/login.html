@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Login/Signup</title>
+<style>
+    /* pranjal */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        display: flex;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 900%
+        width: 100%;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        height: 700px
+        
+    }
+
+    .image-section {
+        background: url("assects/login\ image.png") center/cover no-repeat;
+        color: white;
+        flex: 1;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .image-section h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .image-section h3 {
+        font-size: 20px;
+        font-weight: normal;
+        margin-bottom: 15px;
+    }
+
+    .image-section p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .form-section {
+        flex: 1;
+        padding: 40px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .input-group input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    .form-section a {
+        font-size: 12px;
+        text-decoration: none;
+        color: #2575fc;
+        float: right;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background: #2575fc;
+        color: white;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #1f63d4;
+    }
+
+    .divider {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 14px;
+        position: relative;
+    }
+
+    .divider::before, .divider::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 1px;
+        background: #ccc;
+    }
+
+    .divider::before { left: 0; }
+    .divider::after { right: 0; }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .toggle-link {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .toggle-link a {
+        color: #2575fc;
+        text-decoration: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+        .image-section {
+            height: 250px;
+            text-align: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div class="container" id="loginContainer">
+    <!-- Left Image Section -->
+    <div class="image-section">
+        <h1>EXPLORE</h1>
+        <h3>THE WORLD</h3>
+        <p>Log in to unlock exclusive deals, plan your dream escapes, and pick up where you left off. Whether it's mountains, beaches, or city lights – your journey starts here!</p>
+    </div>
+
+    <!-- Right Form Section -->
+    <div class="form-section">
+        <h2 id="formTitle">Login</h2>
+        <form id="loginForm">
+            <div id="nameGroup" style="display:none;" class="input-group">
+                <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Enter your email" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Enter your password" required>
+            </div>
+            <div id="confirmPasswordGroup" style="display:none;" class="input-group">
+                <input type="password" placeholder="Confirm password">
+            </div>
+            <a href="#" id="forgotPassword" style="display:block;">Forgot Password?</a>
+            <button class="btn" type="submit" id="submitBtn">Login</button>
+        </form>
+
+        <div class="divider">Or Continue With</div>
+        <div class="social-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/09/IOS_Google_icon.png" alt="Google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+        </div>
+        <div class="toggle-link">
+            Are you new? <a href="#" id="toggleForm">Create an Account</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    const toggleForm = document.getElementById("toggleForm");
+    const formTitle = document.getElementById("formTitle");
+    const nameGroup = document.getElementById("nameGroup");
+    const confirmPasswordGroup = document.getElementById("confirmPasswordGroup");
+    const forgotPassword = document.getElementById("forgotPassword");
+    const submitBtn = document.getElementById("submitBtn");
+
+    let isLogin = true;
+
+    toggleForm.addEventListener("click", (e) => {
+        e.preventDefault();
+        isLogin = !isLogin;
+
+        if (isLogin) {
+            formTitle.textContent = "Login";
+            nameGroup.style.display = "none";
+            confirmPasswordGroup.style.display = "none";
+            forgotPassword.style.display = "block";
+            submitBtn.textContent = "Login";
+            toggleForm.textContent = "Create an Account";
+        } else {
+            formTitle.textContent = "Sign Up";
+            nameGroup.style.display = "block";
+            confirmPasswordGroup.style.display = "block";
+            forgotPassword.style.display = "none";
+            submitBtn.textContent = "Sign Up";
+            toggleForm.textContent = "Login";
+        }
+    });
+</script>
+
+</body>
+</html>
+
+</html>
