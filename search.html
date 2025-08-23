@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<style>
+     body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f2f2f2;
+      min-height: 100vh;
+    }
+
+    .box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 800px;
+      width: 100%;
+      height: 70vh;
+      position: relative;
+    }
+
+    .top {
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      margin-top: 20px;
+    }
+
+    .close {
+      float: right;
+     border:none; 
+      background: #3a7bd5;
+      font-size: 20px;
+      color: #fff5f5;
+      cursor: pointer;
+      border-radius: 70px;
+      height: 30px;
+      width: 30px;
+
+    }
+
+    .search {
+      display: flex;
+      margin-bottom: 15px;
+      
+    }
+
+    .search input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 20px 0 0 20px;
+      outline: none;
+    }
+input::placeholder{
+    color: black;
+    font-size: 17px;
+    padding-left: 20px;
+}
+    .search button {
+      background: #3a7bd5;
+      color: #fff;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 0 20px 20px 0;
+      cursor: pointer;
+    }
+
+    .searched {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      background-color: rgb(255, 254, 254);
+      margin-bottom: 10px;
+    }
+
+    .place-box1,.place-box2,.place-box3,.place-box4 {
+      background: #ffffff;
+      padding: 9px 15px;
+      border-radius: 20px;
+      /* box-shadow: 0 2px 6px rgba(0,0,0,0.1); */
+      border: 1px solid rgb(216, 214, 214);
+      cursor: pointer;
+      /* transition: 0.2s; */
+      color: #7c7c7c;
+    }
+    
+
+    .recent h2 {
+      margin: 15px 0 10px;
+      font-size: 20px;
+      font-weight: bold;
+      padding-right: 580px;
+    }
+
+    .items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    
+    }
+
+    .item {
+      background:#f9f7f7;
+      display: flex;
+      width: calc(50% - 5px);
+      border-radius: 6px;
+      overflow: hidden;
+      font-size: 12px;
+      cursor: pointer;
+      transition: 0.2s;
+      height: 100PX;
+    }
+   
+
+    .item img {
+      width: 100%;
+      max-width: 40%;
+      height: 15vh;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 8px;
+    }
+.info div{
+  color: rgb(94, 95, 94);
+  font-size: 15px;
+}
+
+    .info .name {
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: black;
+    }
+</style>
+
+
+
+<body>
+<div class="box" id="travelBox">
+    <button class="close" id="closeBtn">x</button>
+    <div class="top">What are you looking for?</div>
+
+    <form class="search" >    
+    <input type="text" placeholder="Search">
+    <button type="submit">Search</button>
+    </form>
+
+    <div class="recent">
+      <h2 >Recent Searches</h2>
+      <div class="items">
+
+        <div class="searched">
+          <div class="place-box1">Taj Mahal : Nestled on Bank of Yamuna&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</div>
+          <div class="place-box2">Hampi : UNESCO World Heritage Site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</div>
+        </div>
+        <div class="searched">
+          <div class="place-box1">Uttarakhand : foothills of the Himalayas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</div>
+          <div class="place-box2">Udaipur : An Ancient History&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;X</div>
+        </div>
+
+        <div class="item">
+          <img src="assects/image 13 (14).png" alt="Madhya Pradesh forest">
+          <div class="info">
+            <div >CAMPING</div>
+            <div class="name">Mahabalipuram: World Heritage Site</div>
+            <div>By Sakshi Parge <br>January 10,2025</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assects/image 13 (16).png" alt="Andamans beach">
+          <div class="info">
+            <div>FOREST</div>
+            <div class="name">Sundarbans Mangrove Forests (West Bengal)</div>
+            <div>By Asmita Somawar<br>January 11,2025</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assects/image 13 (17).png" alt="Kasol mountains">
+          <div class="info">
+            <div>DESERT</div>
+            <div class="name">Nubra Valley: Ladakh</div>
+            <div>By Vanihree<br>January 10,2025</div>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assects/image 13 (15).png" alt="Srinagar lake">
+          <div class="info">
+            <div>LAKE</div>
+            <div class="name">Srinagar: heaven on earth</div>
+            <div>By Aditya Waghmare<br>January 10,2025</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="script.js"></script>
+</html>

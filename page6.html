@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outdoor Adventures</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      
+    }
+
+    /* 🔹 HEADER */
+    header {
+      background: #fff;
+      /* padding: 10px 30px; */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+    header .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #3e8adc;
+    }
+
+    /* 🔹 HERO IMAGE */
+    .hero {
+      background: url("assects/image 14 (1).png") no-repeat center/cover;
+      height: 800px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 45px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 15px;
+      opacity: 0.9;
+    }
+
+   
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      
+      margin-top: 10px;
+      padding-left: 30px;
+    }
+    .content {
+      /* background: #fff; */
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h2 {
+      margin-top: 0;
+      color: #222;
+      font-size: 28px;
+    }
+    h3 {
+      margin-top: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .content img {
+      width: 48%;
+      border-radius: 10px;
+      margin: 1%;
+    }
+    .image-row {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .sidebar {
+  width: 500px;
+  margin-left: 100px;
+
+}
+
+.featured-article, .category-box, .written-by {
+  /* border: 2px solid #ccc; */
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  /* background: #fff; */
+  width: 100%;
+}
+
+/* Article cards */
+.article-card {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 13px;
+  border:1px solid rgb(185, 181, 181);
+}
+
+.article-card img {
+  /* width: 250px; */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+/* Social link box */
+.social-link {
+  text-align: center;
+  background: #3e8adc;
+  padding: 12px;
+  border-radius: 10px;
+  height: 220px;
+}
+
+.social-link h3 {
+  margin-bottom: 5px;
+  font-size: 30px;
+}
+
+.social-link .icons a {
+  margin: 0 8px;
+  font-size: 18px;
+  color: #444;
+}
+
+/* Category box */
+.category-box .categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.category-box button {
+  flex: 35%;
+  padding: 25px;
+  border: none;
+  border-radius: 8px;
+  background: #95b5eb;
+  cursor: pointer;
+  
+}
+
+/* Written by box */
+.written-by {
+  /* text-align: center; */
+border: 1px solid rgb(187, 186, 185);
+  background-color: rgb(255, 253, 253);
+}
+
+.written-by .icons  {
+  margin: 20px 6px;
+  /* font-size: 18px; */
+  /* color: #444; */
+
+}
+
+
+    /* Responsive */
+    @media(max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+      .content img {
+        width: 100%;
+      }
+    }
+    .article-card p{
+        font-size: large;
+    }
+
+    
+    .comments-section {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .comments-section h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .comment {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+      width: 1200px;
+    }
+
+    .comment strong {
+      font-size: 16px;
+      color: #111;
+    }
+
+    .comment small {
+      color: #777;
+      font-size: 12px;
+    }
+
+    .comment p {
+      margin: 8px 0;
+    }
+
+    .comment button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .comment button:hover {
+      background-color: #0056b3;
+    }
+    .join-discussion {
+  margin-top: 30px;
+}
+
+.join-discussion h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  width: 900px;
+  height: 200px;
+}
+
+textarea {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  resize: vertical;
+  font-size: 14px;
+  min-height: 120px;
+}
+
+.inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputs input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  height: 40px;
+}
+
+.join-discussion button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.join-discussion button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+.related-posts {
+  margin: 40px 0;
+}
+
+.related-posts h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.posts-container {
+  display: flex;
+  gap: 20px;
+ 
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  flex: 1;
+  min-width: 350px;
+  /* max-width: 450px; */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.post-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 15px;
+}
+
+.category {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.post-card h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.author {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.author span {
+  margin-left: 10px;
+  color: #888;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .posts-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+ 
+/* Newsletter Section */
+.newsletter {
+  background-color: #4a90e2;
+  width: 300%;                  
+  max-width: 2000px;            
+  /* margin: 10px ;  */
+  margin-right: 150px;        
+  color: white;
+  padding: 20px 20px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+  /* gap: 20px;                    */
+}
+
+.newsletter p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  margin-bottom: 5px;
+  /* color: white; */
+}
+
+.newsletter h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:white;
+}
+
+.subscribe {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+    
+  font-size: 14px;
+  padding: 4px 40px; 
+  height: 25px;
+}
+input::placeholder {
+  color: white;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #7fb3f2;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+
+}
+
+.travel-img img {
+  max-width: 100%;              /* Image resizes */
+  height: auto;
+}
+
+/* Footer */
+footer {
+
+  padding: 30px 20px;
+  text-align: center;
+  width: 250%;
+}
+
+footer p {
+  color: gray;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;     
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.social-icons img{
+  height: 30px;
+  width: 30px;
+}
+.bottom-footer {
+  border-top: 3px solid #ddd;
+  margin-top: 10px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 16px;
+  color: gray;
+}
+
+.bottom-footer a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+/* Responsive */
+@media(max-width:768px){
+  .content-grid{grid-template-columns:1fr}
+  .posts{grid-template-columns:1fr}
+}
+@media (max-width: 480px) {
+  .newsletter {
+    padding: 20px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .bottom-footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+/* 🔹 Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .newsletter {
+    flex-direction: column;     /* Stack items */
+    text-align: center;
+  }
+  .subscribe {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .newsletter h1 {
+    font-size: 26px;
+  }
+  .newsletter p {
+    font-size: 16px;
+  }
+  .newsletter input {
+    max-width: 100%;
+  }
+  .newsletter button {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Travel Diaries</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Nubra valley:Ladakh</h1>
+    <p>3 Comments · January 25, 2025</p>
+  </section>
+
+  <!-- ✅ Now your blog content starts -->
+  <div class="container">
+    <!-- your whole pasted content here -->
+     <div class="container">
+    <!-- Left Content -->
+    <div class="content">
+        <p style="color: rgb(81, 79, 79);">Explore the Manali :Outdoor Advantures Unleased</p>
+      <h2>Introduction</h2>
+      <p style="font-size: 20px;color: rgb(99, 98, 98);">Nubra Valley, often called Ladakh's desert oasis, is a high-altitude cold desert in Ladakh, India, known for its stunning landscapes, including sand dunes, snow-capped peaks, and lush greenery. It's a unique blend of desert and mountains, nourished by the Nubra and Shyok rivers. The valley offers a variety of attractions, including the Diskit Monastery, Hunder sand dunes, and the chance to 
+        ride Bactrian camels. .</p>
+
+      <h3>Travel Tips and Hacks</h3>
+      <ul>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Inner Line Permit: All non-locals need an Inner Line Permit to visit Nubra Valley.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Altitude: Be mindful of altitude sickness and take necessary precautions like staying hydrated and avoiding strenuous activity.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Accommodation: Book your accommodation in advance, especially during peak season.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Transportation: Shared taxis and jeeps are common modes of transportation in Nubra Valley.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Pack Appropriately: Even in summer, pack warm clothing for cooler evenings and mornings.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Respect Local Culture: Interact respectfully with the local communities and experience their unique traditions.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Enjoy the Scenery: Take time to appreciate the stunning landscapes, including the sand dunes, snow-capped peaks, and lush green areas.</li>
+</ul>
+
+      <h3>Outdoor Adventures</h3>
+      <ul>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Camel Safari In Hunder: Experience a ride on the double-humped Bactrian camels amidst the sand dunes.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Diskit Monastery: Visit the oldest and largest monastery in Nubra, home to a towering Maitreya Buddha statue.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Turtuk Village: Explore this remote village near the Indo-Pakistan border, known for its Balti culture.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Panamik Hot Springs: Relax in the natural sulfur springs believed to have medicinal properties.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Samstanling Monastery: Located in Sumur, this beautiful monastery is worth a visit.</li>
+  <li style="font-size: 18px;color: rgb(86, 84, 84);">Stargazing: Enjoy the clear skies and low light pollution for stargazing.</li>
+</ul>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 900px; margin: auto;">
+  
+  <!-- Left column with 2 stacked images -->
+  <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 10px;">
+    <img src="assects/image 46 (1).png" alt="Rafting" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+    <img src="assects/image 45 (1).png" alt="Cycling" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+  </div>
+  
+  <!-- Right column with tall image -->
+  <div>
+    <img src="assects/101.png" alt="Paragliding" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+  </div>
+</div>
+</div>
+
+    <aside class="sidebar">
+
+  <!-- ✅ Featured Article -->
+  <div class="featured-article">
+    <h2>Featured Article</h2>
+
+    <!-- Article 1 -->
+    <div class="article-card">
+      <img src="assects/mahabalipuram.png" alt="CAMPING">
+      <div>
+        <p><strong>Mahabalipuram: World Heritage Site</strong></p>
+        <small>By Rajshree Kathare - January 13, 2025</small>
+      </div>
+    </div>
+
+    <!-- Article 2 -->
+    <div class="article-card">
+      <img src="assects/uttrakhand.png" alt="HIKING">
+      <div>
+        <p><strong>Uttarakhand:foothills of the Himalayas</strong></p>
+        <small>By Rajashri Kathare - January 04, 2025</small>
+      </div>
+    </div>
+
+    <!-- Article 3 -->
+    <div class="article-card">
+      <img src="assects/sundarbans.png" alt="FOREST">
+      <div>
+        <p><strong>Nubra Valley: Ladakh</strong></p>
+        <small>By Aditya Waghmare- Jan 13, 2025</small>
+      </div>
+    </div>
+
+    <!-- ✅ Social Link inside Featured Article -->
+    <div class="social-link">
+      <h3>Social Link</h3>
+      <p>Follow Me On Social Media</p>
+      <div class="icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Category Box -->
+  <div class="category-box">
+    <h2>Category</h2>
+    <div class="categories">
+      <button>Hills</button>
+      
+      <button>Desert</button>
+      <button>Forest</button>
+      <button>Camping</button>
+    </div>
+  </div>
+
+  <!-- ✅ Written By Box -->
+  <div class="written-by" style="text-align: center;">
+    <p>Written By Vaneshri Tudmallu</p>
+    <div class="icons" >
+      <img src="assects/instalogo.png" alt="" >
+      <img src="assects/facebook.png" alt="" srcset="">
+      <img src="assects/pintrestlogo.png" alt="" srcset="">
+      <img src="assects/youtubelogo.png" alt="" srcset="">
+      <img src="assects/xlogo.png" alt="" srcset="">
+    </div>
+  </div>
+
+</aside>
+
+  <!-- Comments Section -->
+  <div class="comments-section">
+    <h2>3 Comments</h2>
+
+    <!-- Comment 1 -->
+    <div class="comment">
+      <p style="font-size: 22px;font-weight:bold;">Sakshi Parge</p>
+        <p style="color: rgb(155, 154, 154);">January 14, 2025, 10 am</p>
+      </p>
+      <p style="color: #666565;">Your vivid descriptions and captivating storytelling make me feel like I'm right there, exploring each destination alongside you. Your travel blog is a constant source of inspiration for my own adventures. Keep the amazing content coming!</p>
+      <button>Reply</button>
+    </div>
+
+    <!-- Comment 2 -->
+    <div class="comment">
+      <p style="font-size: 22px;font-weight:bold;">Asmita Somawar</p>
+        <p  style="color: rgb(155, 154, 154);">January 13, 2025, 12 pm</p>
+      </p>
+      <p style="color: #666565;">Your photos are absolutely stunning! They really capture the beauty of the places you visited. Your blog has quickly become one of my favorites. Keep up the great work!</p>
+      <button>Reply</button>
+    </div>
+
+    <!-- Comment 3 -->
+    <div class="comment">
+      <p style="font-size: 22px;font-weight:bold;">Aditya Waghmare</p>
+        <p  style="color: rgb(155, 154, 154);">January 13, 2025, 7 am</p>
+      
+      <p style="color: #666565;">The tips you shared were incredibly helpful. I'm definitely going to use them on my next trip. The blog is very well-organized and easy to navigate. It's a pleasure to read.</p>
+      <button>Reply</button>
+    </div>
+
+    <!-- Join Discussion -->
+<div class="join-discussion">
+  <h2>Join the discussion</h2>
+  <form>
+    <div class="form-row">
+      <!-- Left: Comment Box -->
+      <textarea placeholder="Write your comment..."></textarea>
+
+      <!-- Right: Inputs -->
+      <div class="inputs" style="display:flex; flex-direction:column; gap:1px; width:250px;">
+
+  <label for="name" style="font-weight:normal; margin-bottom:3px; color:#333;">Name</label>
+  <input type="text" id="name" required 
+         style="padding:8px; border:1px solid #aaa; border-radius:5px; outline:none;">
+
+  <label for="email" style=" margin-bottom:3px; color:#333;">Email</label>
+  <input type="email" id="email" required 
+         style="padding:8px; border:1px solid #aaa; border-radius:5px; outline:none;">
+
+  <label for="website" style=" margin-bottom:3px; color:#333;">Website</label>
+  <input type="text" id="website" 
+         style="padding:8px; border:1px solid #aaa; border-radius:5px; outline:none;">
+</div>
+</div>
+  </form>
+    <!-- Button below both -->
+    <button type="submit">Submit Comment</button>
+
+
+<!-- You Might Also Like Section -->
+<section class="related-posts">
+  <h2>You Might Also Like</h2>
+  <div class="posts-container">
+
+    <!-- Card 1 -->
+    <div class="post-card">
+      <img src="assects/sundarbans.png" alt="sundarbans">
+      <div class="post-content">
+        <p class="category">FOREST</p>
+        <h3>Sundarbans Mangrove Forests (Wesst Bengal)</h3>
+        <p class="author">By Aditya Waghmare <span>January 13, 2025</span></p>
+        <p class="description">
+         The Sundarbans Mangrove Forests, located in the delta region of the Ganges, Brahmaputra, and Meghna rivers in West Bengal,
+          are not only the largest tidal halophytic mangrove forest in the world but also a UNESCO World Heritage Site!
+        </p>
+      </div>
+    </div>
+<!-- <<<<<<card 3>>>>>>>>>>>>> -->
+     
+      <div class="post-card">
+      <img src="assects/99.png" alt="Nubra Valley">
+      <div class="post-content">
+        <p class="category">HILLS</p>
+        <h3>Uttarakhand: foothills of the Himalayas</h3>
+        <p class="author">By Pranjal Shetty <span>January 12, 2025</span></p>
+        <p class="description">
+          Set on the foothills of the Himalayas, Uttarakhand offers spiritual zest, natural wonders and adrenaline-packed adventure activities. Mussoorie, Nainital, Rishikesh, Ranikhet and Auli are some of the most famous hill stations here.
+        </p>
+      </div>
+    </div>
+    <!-- Card 2 -->
+     <div class="post-card">
+      <img src="assects/mahabalipuram.png" alt="Mahabalipuram">
+      <div class="post-content">
+        <p class="category">CAMPING</p>
+        <h3>Mahabalipuram: World Heritage Site</h3>
+        <p class="author">By Rajashree Kathare <span>January 13, 2025</span></p>
+        <p class="description">
+          Tsomoriri Lake is the highest lake in the world and located in Ladakh. Camping here is the experience of a lifetime.
+        </p>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<div class="container">
+  <div class="newsletter">
+      <div class="text-content">
+          <p>Keep in Touch</p>
+          <h1>Explore the World</h1>
+          <div class="subscribe">
+              <input type="email" placeholder="Enter your email">
+              <button>Subscribe</button>
+          </div>
+      </div>
+      <div class="travel-img">
+          <img src="assects/travel.png" alt="Travel graphic">
+      </div>
+  </div>
+</div>
+
+
+<!-- Footer Section -->
+<footer>
+    <p>Join our community of over 4,000+ readers and get updates on the latest travel guides, itineraries, and travel stories.</p>
+    
+    <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+
+        <div class="social-icons">
+            <a href="#"><img src="assects/facebook.png" ></a>
+            <a href="#"><img src="assects/instalogo.png"></a>
+            <a href="#"><img src="assects/facebook.png"></a>
+            <a href="#"><img src="assects/xlogo.png"></a>
+            <a href="#"><img src="assects/youtubelogo.png"></a>
+        </div>
+    </div>
+
+    <div class="bottom-footer">
+        <span>A Product Of <a href="#">Travel Diaries</a></span>
+        <span>All rights reserved</span>
+    </div>
+</footer>
+
+
+
+
+  </div>
+
+</body>
+</html>
