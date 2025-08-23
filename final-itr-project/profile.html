@@ -60,6 +60,7 @@ input::placeholder {
   font-family: 'Times New Roman', Times, serif;
   color: white;
   font-size: larger;
+  padding-left: 20px;
 } 
 
 .search-container {
@@ -73,25 +74,25 @@ input::placeholder {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 100px;
   width: 250px;           
 }
 
 .search-container img {
   position: absolute;
-  left: 10px;             
-  width: 19px;
-  height: 19px;
+           
+  width: 25px;
+  height: 25px;
 
 }
 
 .search-container input {
-  
-  padding: 8px 8px 8px 35px; 
+  padding: 13px 13px 8px 35px; 
   border: none;
   outline: none;
   background: transparent;
   color: white;
+  font-size: 20px;
 }
 
 
@@ -103,14 +104,14 @@ input::placeholder {
 .share-btn {
   background: rgb(255, 255, 252);
   border: none;
-  padding: 1vh 1vw;
-  border-radius: 20px;
+  padding: 2px 15px;
+  border-radius: 40px;
   cursor: pointer;
-  font-size: 1.5vh;
+  font-size: 15px;
   color: #0077cc;
 }
 .icon-circle {
-  width: 140%;              
+  width: 80%;              
   height: 4vh;
   border-radius: 50%;      
   border: 1px solid #d2d0d0;   
@@ -141,6 +142,7 @@ input::placeholder {
   background-color: #aaa;
   width: 15%;
   border-radius: 100%;
+  margin-left: 10px;
 }
 .profile-pic p {
   font-family: 'Times New Roman', Times, serif;
@@ -186,22 +188,22 @@ input::placeholder {
   gap: 2vw;
   margin-top: 2vh;
   width: 100%;
-  padding: 2vh 2vw;
+  
   box-sizing: border-box;
 }
 
 .card {
   border: 1px solid #ddd;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   overflow: hidden;
   background: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
 .card img {
-  width: 100%;          
+  width: 95%;          
   height: 28vh;         
-  object-fit: cover;
+
 }
 
 .card h5, 
@@ -232,13 +234,15 @@ input::placeholder {
 
 /* Sidebar Container */
 .profile-right {
-  width: 280px;
+  width: 250px;
   background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 20px;
   font-family: "Segoe UI", sans-serif;
   text-align: center;
+  height: 700px;
+  margin-top: 250px;
 }
 
 /* Profile Picture */
@@ -247,9 +251,6 @@ input::placeholder {
   height: 180px;
   margin: 0 auto 15px;
   border-radius: 50%;
-  /* background: url("assects/profile.jpg") no-repeat center/cover; */
-  /* border: 4px solid #f39c12; */
-  /* box-shadow: 0 4px 8px rgba(0,0,0,0.15); */
   background-color: gainsboro;
 }
 
@@ -257,12 +258,12 @@ input::placeholder {
 .profile-right h2 {
   font-family: 'Times New Roman', Times, serif;
   font-size: 22px;
-  color: #333;
+  color: #1e1d1d;
 }
 
 /* Subtitle */
 .profile-right p {
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 15px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -270,19 +271,19 @@ input::placeholder {
 /* Headings */
 .profile-right h3 {
   text-align: left;
-  font-size: 16px;
+  font-size: 18px;
   margin: 15px 0 10px;
-  color: #444;
+  color:black;
   padding-left: 6px;
 }
 
 /* Social Icons */
-.social-icons1 img{
+.social-icons1,img{
   display: flex;
   justify-content:center;
-  gap: 0px;
-  margin-bottom: 20px;
-  padding-left: 400px;
+  gap: 5px;
+  /* margin-bottom: 20px; */
+
 }
 
 
@@ -307,8 +308,19 @@ input::placeholder {
 }
 
 .contact img {
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
+  margin-top: 2px;
+ 
+}
+.phone h4{
+  font-size: 15px;
+}
+.email h4{
+  font-size: 15px;
+}
+.location{
+    font-size: 15px;
 }
 
 /* Divider */
@@ -381,45 +393,6 @@ footer p {
 }
 
 
-/* --------------------
-   RESPONSIVE DESIGN
---------------------- */
-
-/* Tablets ≤ 992px */
-@media (max-width: 992px) {
-  .profile-section { flex-direction: column; padding: 5vh 5%; }
-  .card-grid { grid-template-columns: 1fr 1fr; gap: 2vw; }
-  .profile-right { order: -1; width: 100%; }
-  .profile-left { width: 100%; }
-}
-
-/* Mobile ≤ 768px */
-@media (max-width: 768px) {
-  .card-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 3vw; }
-  .card img { height: 22vh; }
-  .card h5 { font-size: 2.2vh; }
-  .card h6 { font-size: 1.5vh; }
-  .card p { font-size: 1.6vh; }
-
-  .nav-links { display: none; flex-direction: column; gap: 2vh; background: #0077cc; padding: 2vh 0; position: absolute; top: 10vh; left: 0; right: 0; width: 100%; }
-  .nav-links.active { display: flex; }
-  .menu-icon { display: flex; }
-  .right-actions { flex-direction: column; gap: 1.5vh; }
-  .share-btn { padding: 1vh 2vw; font-size: 1.8vh; }
-}
-
-/* Extra Small Screens ≤ 480px */
-@media (max-width: 480px) {
-  .card-grid { grid-template-columns: 1fr; }
-  .card img { height: 20vh; }
-  .card h5 { font-size: 2vh; }
-  .card p { font-size: 1.5vh; }
-
-  .profile-header { flex-direction: column; text-align: center; gap: 2vh; height: auto; padding: 2vh; }
-  .search-container input { width: 90%; }
-}
-
-
 
 
   </style>
@@ -464,6 +437,7 @@ footer p {
         <div class="profile-pic">
           <p>AsmitaSomawar <span>India</span></p>
         
+        
          <div class="text"> 
         
 </div>
@@ -478,7 +452,7 @@ footer p {
         <button>Draft</button>
         <button>About</button>
         <button>Contact Us</button>
-        <hr>
+        <hr >
       </div>
 
 
@@ -511,25 +485,27 @@ footer p {
         <div class="about-pic"></div>
         <h1>Asmita Somawar</h1>
       <P style="color: rgb(139, 141, 141);">Travel blogger</P>
-      <hr>
-    <br>
-        <h2 style="padding-right: 300px;">_FollowMe</h2>
-        <div class="social-icons1"></div>
-          <a href="#"><img src="assects/instalogo.png"style="width: 30px;height: 30px;"></a>
-          <a href="#"><img src="assects/facebook.png"style="width: 30px;height: 30px;"></a>
-          <a href="#"><img src="assects/youtubelogo.png"style="width: 30px;height:30px;"></a>
-          <a href="#"><img src="assects/pintrestlogo.png"style="width: 30px;height: 30px;"></a>
-          <a href="#"><img src="assects/xlogo.png"style="width: 30px;height:30px;"></a>
-          <hr>
+      <hr style="border: 1px solid rgb(189, 184, 184);">
+  
+        <h2 style="padding-right: 300px;margin-bottom: 10px;">_FollowMe</h2>
+        <div class="social-icons1">
+          <img src="assects/instalogo.png"style="width: 30px;height: 30px;">
+          <img src="assects/facebook.png"style="width: 30px;height: 30px;">
+          <img src="assects/youtubelogo.png"style="width: 30px;height:30px;">
+        <img src="assects/pintrestlogo.png"style="width: 30px;height: 30px;">
+        <img src="assects/xlogo.png"style="width: 30px;height:30px;">
+        </div>
+                  <hr style="border: 1px solid rgb(189, 184, 184);">
+
           <div class="info">
             <h3 >__Information</h3>
             
             <div class="contact"style="padding-right:500px ;color: rgb(139, 141, 141);margin-top:2px">
-<span class="phone">
-  <img src="assects/phone.png" alt="Phone"> +919823216450
+<span class="phone"style="padding-top: 10px;">
+  <img src="assects/phone.png" alt="Phone"> <h4>+919823216450</h4>
 </span>
-<span class="email"><img src="assects/mail.png" alt="Email">asmitasomawar@gmail.com</span>
-<span class="location"><img src="assects/location.png" alt="Email">Snivajinagar,Nanded</span>
+<span class="email"><img src="assects/mail.png" alt="Email"><h4>asmitasomawar@gmail.com</h4></span>
+<span class="location"><img src="assects/location.png" alt="Email"><h4>ShivajiNagar,Nanded</h4></span>
           </div>
           </div>
         </div>

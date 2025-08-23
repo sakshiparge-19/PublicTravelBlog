@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -695,6 +696,8 @@ body {
   background-color: white;
   color: black;
 }
+=======
+>>>>>>> ab42472d8a455805e8bde8eb21321b37295bc715
 
 /* Base */
 :root {
@@ -723,7 +726,8 @@ color:var(--ink)}
   text-align:center; 
   font-size:30px;
   font-weight:200; 
-margin-bottom:10px 
+margin-bottom:10px ;
+
 }
 
 /* Featured Grid */
@@ -734,7 +738,7 @@ margin-bottom:10px
 }
 .card {
   position:relative;
-  border-radius:var(--round);
+
   overflow:hidden
 }
 .card img {
@@ -743,10 +747,12 @@ margin-bottom:10px
   object-fit:cover;
   display:block}
 .card--lg {
-  height:600px
+  height:820px;
+  width: 100%;
 }
 .card--sm {
-  height:300px
+  height:400px;
+
 }
 .right-col {
   display:flex;
@@ -754,29 +760,35 @@ margin-bottom:10px
   gap:16px}
 .card-overlay {
   position:absolute;
-  left:15px;
-  right:15px;
-  bottom:80px;
+  left:60px;
+  right:30px;
+  bottom:60px;
   background:rgba(0,0,0,.5);
   color:#fff;
-  padding:20px;
+  padding:30px;
 
 }
 .card-title {
   margin:0 0 4px;
-  font-size:15px
+  font-size:25px;
+  color: rgb(255, 254, 254);
 }
 .card-meta {
-  font-size:12px
+  font-size:15px;
+  color: white;
+  text-align: center;
 }
 
 /* Section */
 /* .section{margin:20px 0} */
 .section-title{
   text-align:center;
-  font-size:22px;
+  font-size:35px;
   font-weight:bold;
-  margin-bottom:16px}
+  margin-bottom:16px;
+  color: rgb(5, 5, 5);
+  font-family: 'Times New Roman', Times, serif;
+}
 
 /* Grid Layout */
 .content-grid{
@@ -794,12 +806,20 @@ margin-bottom:10px
   height: 500px;
   background:#9bc5dc;
   padding:16px;
-  border-radius:16px
+  border-radius:16px;
+
 }
 .card-plain2{
-  height: 180px;
+  height: 200px;
   background-color: #0e9ce8;
 }
+.card-plain2 div {
+  display: flex;
+  justify-content: center;
+  /* gap: 15px; */
+  margin-top: 10px;
+}
+
 .card-plain2,h2{
   text-align: center;
   font-size: larger;
@@ -813,16 +833,16 @@ margin-bottom:10px
 .posts{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px
+  gap:16px;
 }
 .post{
-  background:#fff;
+
   border:1px solid #e5e7eb;
   overflow:hidden
 }
 .post img{
-  width:97%;
-  height:300px;
+  width:95%;
+  height:500px;
   /* object-fit:cover */
 }
 .post-body{
@@ -832,7 +852,8 @@ margin-bottom:10px
   font-size:20px;text-align: left;
 }
 .post-meta{
-  font-size:12px;color:#c3c9d4
+  font-size:12px;
+  color:#c3c9d4
 }
 .tag{
   font-size:15px;font-weight:bold;
@@ -845,7 +866,7 @@ color: #1f1e1e;
 .newsletter {
   background-color: #4a90e2;
   width: 100%;                  
-  max-width: 1600px;            
+  max-width: 2200px;            
   margin: 20px auto;         
   color: white;
   padding: 40px 20px;
@@ -885,7 +906,7 @@ color: #1f1e1e;
   background-color: #4a90e2;
   font-family: 'Times New Roman', Times, serif;
   width: 100%;
-  max-width: 250px;           
+  max-width: 1200px;           
   font-size: 14px;
   padding: 10px; 
 }
