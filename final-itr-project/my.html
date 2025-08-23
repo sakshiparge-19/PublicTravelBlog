@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Diaries - About</title>
+  <style>
+    /* Header Styles */
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2vh 5%;
+      background: #0077cc;
+      color: white;
+      width: 100%;
+      height: 5vh;
+    }
+
+    .profile-header .logo {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 2.5vh;
+      font-weight: bold;
+    }
+
+    .profile-header .logo span {
+      padding-left: 30px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 3vw;
+    }
+
+    .profile-header .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 2vh;
+    }
+
+    input::placeholder {
+      font-family: 'Times New Roman', Times, serif;
+      color: white;
+      font-size: 20px;
+      padding-left: 20px;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .search-container div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 100px;
+    }
+
+    .search-container img {
+      position: absolute;
+      padding-left: 10px;
+      width: 20px;
+      height: 25px;
+    }
+
+    .search-container input {
+      padding: 8px 8px 8px 30px;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: white;
+      font-size: 20px;
+    }
+
+    .right-actions {
+      display: flex;
+      align-items: center;
+      gap: 1vw;
+      margin-right: 140px;
+    }
+
+    .share-btn {
+      background: rgb(255, 255, 252);
+      border: none;
+      padding: 7px 15px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 15px;
+      color: #0077cc;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .icon-circle {
+      width: 150%;
+      height: 5vh;
+      border-radius: 50%;
+      border: 1px solid #d2d0d0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .icon-circle img {
+      width: 19px;
+      height: 19px;
+    }
+
+    /* Main Content */
+    .main {
+      display: flex;
+      padding: 20px 5%;
+      gap: 50px;
+    }
+
+    .main-left {
+      width: 700px;
+    }
+
+    .main-right {
+      width: 800px;
+    }
+
+    .main-left img,
+    .main-right img {
+      border-radius: 10px;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+      background-color: #4a90e2;
+      color: white;
+      padding: 20px;
+      border-radius: 15px 15px 0 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .newsletter p {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+
+    .newsletter h1 {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .subscribe {
+      display: flex;
+      gap: 10px;
+    }
+
+    .newsletter input {
+      text-align: center;
+      border: 1px solid white;
+      border-radius: 8px;
+      background-color: #4a90e2;
+      color: white;
+      font-size: 14px;
+      padding: 4px 10px;
+      height: 30px;
+      width: 200px;
+    }
+
+    .newsletter button {
+      padding: 10px 20px;
+      background-color: #7fb3f2;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .travel-img img {
+      max-width: 200px;
+      height: auto;
+    }
+
+    /* Footer */
+    footer {
+      background-color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    footer p {
+      color: gray;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .footer-links a {
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      color: #333;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+
+    .social-icons img {
+      height: 30px;
+      width: 30px;
+    }
+
+    .bottom-footer {
+      border-top: 2px solid #ddd;
+      margin-top: 5px;
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: gray;
+    }
+
+    .bottom-footer a {
+      color: #4a90e2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="profile-header">
+    <div class="logo">Travel <br><span>Diaries</span></div>
+    <nav class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+    </nav>
+
+    <div class="right-actions">
+      <a href="share.html" class="share-btn">Share Work +</a>
+      <div class="search-container">
+        <div>
+          <img src="assects/search.png" alt="search">
+          <input type="text" placeholder="Search">
+        </div>
+      </div>
+      <div class="icons">
+        <div class="icon-circle">
+          <img src="assects/notification.png" alt="Notification">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="main">
+    <!-- Left Section -->
+    <div class="main-left">
+      <div style="font-weight: bold;">
+        <div style="display: flex; word-spacing: 10px;">
+          <p>Home</p>
+          <div style="color: gray; font-weight: bold; display: flex; margin-left: 5px;">
+            <p>> About</p>
+          </div>
+        </div>
+      </div>
+
+      <h1>Welcome to Travel Diaries :</h1>
+      <p>
+        Unveiling the through My Lens! <br>
+        Hello, fellow wanderers! I'm Rajashree Kathare, the creator and explorer behind this <br>
+        personal travel blog. Embarking on a journey of self-discovery, I discovered a profound <br>
+        passion for unravelling the world's mysteries, one destination at a time. <br>
+        At Travel Diaries , we believe that travel is not just about visiting new places; it's a transformative experience that leaves an indelible mark on the soul. Our mission is to inspire and guide you on your own odyssey of discovery, providing insights into hidden gems, cultural nuances, and the beauty that lies off the beaten path.
+      </p>
+
+      <img src="assects/WhatsApp Image 2025-08-14 at 00.26.14_7eba005d.jpg" height="478" width="638" alt="">
+
+      <h1>Why Travel Diaries?</h1>
+      <p>
+        Exploreist is not just a collection of travel tales; it's a curated space where each story is a
+        brushstroke in the vibrant painting of our global adventures. We dive into the heart of
+        destinations, capturing the essence of diverse landscapes, local flavours, and the magic
+        that happens when cultures collide.
+      </p>
+
+      <h1>What to Expect :</h1>
+      <p>
+        <b>Authentic Narratives:</b> Our stories are genuine and unfiltered, sharing both the highs and lows
+        of our travel escapades.<br>
+        <b>Local Insights:</b> Beyond the tourist hotspots, we delve into the heart of communities,
+        forging connections and celebrating the rich tapestry of global cultures.<br>
+        <b>Practical Tips:</b> From travel hacks to must-visit spots, we offer practical advice to enhance
+        your journeys and make them as seamless as possible.<br>
+        <b>Photography Showcase:</b> Immerse yourself in the visual feast of our travels. Every image is
+        a testament to the breathtaking beauty that awaits you around the world.
+      </p>
+
+      <h1>Join Our Community:</h1>
+      <p>
+        Beyond the blog, we invite you to be a part of our travel tribe. Share your own stories, ask
+        questions, and connect with like-minded explorers. Let's build a community that
+        celebrates the diverse tapestry of our global adventures. <br><br>
+        Thank you for joining us on this incredible journey. Whether you're an avid traveler or an
+        armchair explorer, there's a place for you at Travel Diaries. Here's to countless more
+        miles, experiences, and stories waiting to unfold. <br><br>
+        Adventure awaits! 🌍✈
+      </p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="main-right">
+     <!-- Right Section --> 
+      <div style="width: 800px;height: 180px;"> 
+        <h1>Featured Article</h1><br>
+         <!-- Articles --> 
+          <div style="display: flex;">
+             <div><img src="assects/image 13 (15).png" width="240" height="160" style="border-radius: 10px;" alt="">
+            </div> <div style="margin-left: 20px;"> <p>HIKING</p>
+               <h1 style="font-size: 20px;">Uttarakhand: foothills of the Himalayas</H1>
+                 <p>By:Somawar Asmita :January 04,2025</p> </div> 
+                </div> 
+                <div style="display: flex;"> <div><br><img src="assects/image 13 (16).png" width="240" height="160" style="border-radius: 10px;" alt=""></div> <div style="margin-left: 20px;"><br> <p>FOREST</p> <h1 style="font-size: 20px;">Sundarbans Mangrove Forests (West Bengal)</h1> <p>By: Rajashree Kathare : January 13,2025</p> </div> </div> <div style="display: flex;"> <div><br><img src="assects/image 13 (14).png"width="240" height="160" style="border-radius: 10px;" alt=""></div> <div style="margin-left: 20px;"><br> <p>CAMPING</p> <h1 style="font-size: 20px;">Mahabalalipuram:World Heritage Site</h1> <p>By: Somawar Asmita :January 15,2025</p> </div> </div> <div style="display: flex;"> <div><br><img src="assects/image 13 (17).png"width="240" height="160" style="border-radius: 10px;" alt=""></div> <div style="margin-left: 20px;"><br> <p>DESERT</p> <h1 style="font-size: 20px;">Nubra Valley :Ladakh</h1> <p>By: Pranjal Shetty : January 12,2025</p> </div> </div>
+       <!-- Social Links -->
+         <br> <div style="display: flex; background-color: rgb(129, 222, 247);width: 530px;height: 130px; border-radius: 10px 10px 0 0;"> <div style="margin-left: 170px;"> <h1>Social Link</h1> <p style="font-size: 20px;">Me on social media</p> </div> </div> <div style="display: flex; background-color: rgb(122, 218, 245);width: 530px;height: 110px; border-radius: 0 0 10px 10px;"> <div style="margin-left: 130px;"><img src="assects/instalogo.png" width="50" height="50" alt=""></div> <div style="margin-left: 10px;"><img src="assects/facebook.png" width="50" height="50" alt=""></div> <div style="margin-left: 10px;"><img src="assects/pintrestlogo.png" width="50" height="50" alt=""></div> <div style="margin-left: 10px;"><img src="assects/youtubelogo.png" width="50" height="50" alt=""></div> <div style="margin-left: 10px;"><img src="assects/xlogo.png" width="50" height="50" alt=""></div> </div> <br>
+          <!-- Categories --> 
+         <div> 
+          <h1>Category</h1> 
+        </div> 
+        <div style="display: flex;">
+           <button style="display: flex; width: 180px; background-color:rgb(129, 168, 181); border-radius: 10px;"> <img src="../icons8-hills-50.png" alt=""> 
+            <p style="font-size: 20px; margin-left: 20px;">Hills</p>
+           </button> 
+           <button style="display: flex; width: 180px; margin-left: 60px; background-color: rgb(129, 168, 181); border-radius: 10px;"> <img src="../icons8-desert-48.png" alt=""> <p style="font-size: 20px; margin-left: 20px;">Desert</p> </button> </div> <br> <div style="display: flex;"> <button style="display: flex; width: 180px; background-color: rgb(129, 168, 181); border-radius: 10px;"> <img src="../icons8-forest-64.png" alt=""> <p style="font-size: 20px; margin-left: 10px;">Forest</p> </button> <button style="display: flex; width: 180px; margin-left: 60px; background-color: rgb(129, 168, 181); border-radius: 10px;"> <img src="../icons8-camping-48.png" alt=""> <p style="font-size: 20px; margin-left: 5px;">Camping</p> </button> </div> </div> </div>
+    </div>
+  </div>
+
+  <!-- Newsletter Section -->
+  <div class="newsletter">
+    <div class="text-content">
+      <p>Keep in Touch</p>
+      <h1>Explore the World</h1>
+      <div class="subscribe">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+    <div class="travel-img">
+      <img src="assects/travel.png" alt="Travel graphic">
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Join our community of over 4,000+ readers and get updates on the latest travel guides, itineraries, and travel stories.</p>
+    
+    <div class="footer-links">
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+
+      <div class="social-icons">
+        <a href="#"><img src="assects/facebook.png"></a>
+        <a href="#"><img src="assects/instalogo.png"></a>
+        <a href="#"><img src="assects/facebook.png"></a>
+        <a href="#"><img src="assects/xlogo.png"></a>
+        <a href="#"><img src="assects/youtubelogo.png"></a>
+      </div>
+    </div>
+
+    <div class="bottom-footer">
+      <span>A Product Of <a href="#">Travel Diaries</a></span>
+      <span>All rights reserved</span>
+    </div>
+  </footer>
+</body>
+</html>
