@@ -130,70 +130,10 @@
   </div>
 </div>
 
-<script>
-  const toggleForm = document.getElementById("toggleForm");
-  const formTitle = document.getElementById("formTitle");
-  const nameGroup = document.getElementById("nameGroup");
-  const confirmPasswordGroup = document.getElementById("confirmPasswordGroup");
-  const forgotPassword = document.getElementById("forgotPassword");
-  const submitBtn = document.getElementById("submitBtn");
-  const authForm = document.getElementById("authForm");
-  const errorMsg = document.getElementById("errorMsg");
-
-  let isLogin = true;
-
-  // Toggle between Login and Sign Up
-  toggleForm.addEventListener("click", (e) => {
-    e.preventDefault();
-    isLogin = !isLogin;
-    if(isLogin){
-      formTitle.textContent="Login";
-      nameGroup.style.display="none";
-      confirmPasswordGroup.style.display="none";
-      forgotPassword.style.display="block";
-      submitBtn.textContent="Login";
-      toggleForm.textContent="Create an Account";
-    } else {
-      formTitle.textContent="Sign Up";
-      nameGroup.style.display="block";
-      confirmPasswordGroup.style.display="block";
-      forgotPassword.style.display="none";
-      submitBtn.textContent="Sign Up";
-      toggleForm.textContent="Login";
-    }
-    errorMsg.textContent="";
-  });
-
-  // Form Validation
-  authForm.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    errorMsg.textContent="";
-    const email=document.getElementById("email").value.trim();
-    const password=document.getElementById("password").value.trim();
-    const name=document.getElementById("name").value.trim();
-    const confirmPassword=document.getElementById("confirmPassword").value.trim();
-
-    if(!email || !password || (!isLogin && !name)){
-      errorMsg.textContent="⚠ Please fill all required fields";
-      return;
-    }
-    if(!isLogin && password!==confirmPassword){
-      errorMsg.textContent="⚠ Passwords do not match";
-      return;
-    }
-
-    if(isLogin){
-      alert("✅ Login Successful (demo)");
-    } else {
-      alert("✅ Sign Up Successful (demo)");
-    }
-
-    authForm.reset();
-  });
 
 
 
-</script>
+
 
 </body>
 </html>
