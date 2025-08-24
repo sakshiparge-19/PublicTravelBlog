@@ -79,20 +79,20 @@ input::placeholder {
 }
 
 .search-container img {
-  position: absolute;
-           
+
   width: 25px;
   height: 25px;
 
 }
 
 .search-container input {
-  padding: 13px 13px 8px 35px; 
+  
   border: none;
   outline: none;
   background: transparent;
   color: white;
   font-size: 20px;
+  
 }
 
 
@@ -104,7 +104,7 @@ input::placeholder {
 .share-btn {
   background: rgb(255, 255, 252);
   border: none;
-  padding: 2px 15px;
+  padding: 11px 15px;
   border-radius: 40px;
   cursor: pointer;
   font-size: 15px;
@@ -403,26 +403,27 @@ footer p {
   
   <!-- Navigation Links -->
   <nav class="nav-links">
-    <a href="#">Home</a>
+    <a href="index.html">Home</a>
    <a href="aditya.html">Blog</a>
+   <a href="my.html">About</a>
+   <a href="share.html">ContactUS</a>
 
-    <a href="#">About</a>
-    <a href="#">Contact Us</a>
   </nav>
 
 
   <div class="right-actions">
-    <button class="share-btn">Share Work +</button>
+    <a href="share.html" class="share-btn">Share Work +</a>
+
     <div class="search-container">
       <div>
-  <img src="assects/search.png" alt="search" width="20" height="20">
+  <a href="search.html"><img src="assects/search.png" alt="search" width="20" height="20"></a>
   <input type="text" placeholder="Search">
 </div>
     </div>
 
     <div class="icons">
   <div class="icon-circle">
-    <img src="assects/notification.png" alt="Notification" class="icon">
+   <a href="search.html"> <img src="assects/notification.png" alt="Notification" class="icon"></a>
   </div>
 </div>
   </div>
@@ -449,10 +450,10 @@ footer p {
       
       <!-- Tabs -->
          <div class="tabs">
-        <button>My work</button>
+       <a href="profile.html"> <button>My work</button></a>
         <button>Draft</button>
-        <button>About</button>
-        <button>Contact Us</button>
+        <a href="my.html"><button>About</button></a>
+       <a href="share.html"> <button>Contact Us</button></a>
         <hr >
       </div>
 

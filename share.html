@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Travel Diaries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+    }
+
+    /* Header */
+    .profile-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: #0077cc;
+      color: white;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-family: 'Times New Roman', serif;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .logo span {
+      padding-left: 30px;
+    }
+
+    /* Navigation */
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Right Actions */
+    .right-actions {
+      display: flex;
+      align-items: center;
+      /* gap: 20px; */
+    }
+
+    /* Share Button */
+    .share-btn {
+      background: white;
+      border: none;
+      padding: 6px 18px;
+      border-radius: 40px;
+      cursor: pointer;
+      font-size: 14px;
+      color: #0077cc;
+      transition: 0.3s;
+      margin-right: 20px;
+    }
+
+    .share-btn:hover {
+      background: #f0f0f0;
+    }
+
+    /* Search Box */
+    .search-container div {
+      position: relative;
+      display: flex;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+      width: 220px;
+      padding-left: 35px;
+      background: transparent;
+        margin-right: 10px;
+    }
+
+    .search-container img {
+      position: absolute;
+      left: 10px;
+      width: 18px;
+      height: 18px;
+    }
+
+    .search-container input {
+      border: none;
+      outline: none;
+      padding: 8px;
+      background: transparent;
+      font-size: 14px;
+      color: white;
+    }
+
+    .search-container input::placeholder {
+      color: white;
+      font-family: 'Times New Roman', serif;
+      font-size: 14px;
+    }
+
+    /* Notification Icon */
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background: white; */
+      margin-right: 150px;
+    margin-left: 20px
+    }
+
+    .icon-circle img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 20px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Contact Container */
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .contact-form {
+      flex: 2;
+    }
+
+    .contact-form h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .contact-form h2 {
+      font-size: 22px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    form {
+      margin-top: 15px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      margin:5px;
+    }
+
+    textarea {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background-color: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #1e4db7;
+    }
+
+    /* Profile Card */
+   .profile-right {
+  width: 400px;
+  background: #fff;
+  
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  height: 650px;
+
+  margin-left:60px;
+}
+
+/* Profile Picture */
+.about-pic {
+  width: 45%;
+  height: 180px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background-color: gainsboro;
+}
+
+/* Name */
+.profile-right h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  color: #1e1d1d;
+}
+
+/* Subtitle */
+.profile-right p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Headings */
+.profile-right h3 {
+  text-align: left;
+  font-size: 18px;
+  margin: 15px 0 10px;
+  color:black;
+  padding-left: 6px;
+}
+
+/* Social Icons */
+.social-icons1,img{
+  display: flex;
+  justify-content:center;
+  gap: 5px;
+  /* margin-bottom: 20px; */
+
+}
+
+
+/* Contact Info */
+.info {
+  margin-top: 30px;
+  text-align: right;
+  /* padding-right: 100px; */
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.contact span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact img {
+  width: 25px;
+  height: 25px;
+  margin-top: 2px;
+ 
+}
+.phone h4{
+  font-size: 15px;
+}
+.email h4{
+  font-size: 15px;
+}
+.location{
+    font-size: 15px;
+}
+
+/* Divider */
+.profile-right hr {
+  border: none;
+  height: 1px;
+  background: #eee;
+  margin: 15px 0;
+}
+
+
+    /* Newsletter Section */
+.newsletter {
+  background-color: #4a90e2;
+  /* width: 250%;           */
+ max-width: 2000px;
+   margin: 10px ;  
+ margin-right: 150px;       
+  color: white;
+  padding: 20px 20px;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+   justify-content: space-between; 
+  /* align-items: center; */
+  flex-wrap: wrap;
+  gap: 20px;                    
+}
+
+.newsletter p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+  margin-bottom: 5px;
+  /* color: white; */
+}
+
+.newsletter h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:white;
+}
+
+.subscribe {
+  font-family: 'Times New Roman', Times, serif;
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input {
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 8px;
+  background-color: #4a90e2;
+  font-family: 'Times New Roman', Times, serif;
+  width: 100%;
+    
+  font-size: 14px;
+  padding: 4px 40px; 
+  height: 25px;
+}
+input::placeholder {
+  color: white;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background-color: #7fb3f2;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+
+}
+
+.travel-img img {
+  max-width: 100%;              /* Image resizes */
+  height: auto;
+  /* margin-right: 200px; */
+}
+
+/* Footer */
+footer {
+
+  padding: 30px 20px;
+  text-align: center;
+  
+}
+
+footer p {
+  color: gray;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;     
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+
+  
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 20px;
+  margin-left: 10px;
+  
+}
+
+.social-icons img{
+  height: 30px;
+  width: 30px;
+  
+ 
+}
+.bottom-footer {
+  border-top: 3px solid #ddd;
+  margin-top: 10px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 16px;
+  color: gray;
+}
+
+.bottom-footer a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .right-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .contact-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="profile-header">
+    <!-- Logo -->
+    <div class="logo">
+      Travel <br><span>Diaries</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav-links">
+      <a href="#">Home</a>
+     <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact Us</a>
+    </nav>
+
+    <!-- Right Side Actions -->
+    <div class="right-actions">
+      <!-- Share Button -->
+      <button class="share-btn">Share Work +</button>
+
+      <!-- Search -->
+      <div class="search-container">
+        <div>
+          <img src="assects/search.png" alt="Search Icon">
+          <input type="text" placeholder="Search">
+        </div>
+      </div>
+
+      <!-- Notification Icon -->
+      <div class="icon-circle">
+        <img src="assects/notification.png" alt="Notification">
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    Home > Contact Us
+  </div>
+
+  <!-- Contact Section -->
+  <main class="contact-container">
+    <section class="contact-form">
+      <h1>Let’s Talk</h1>
+      <p class="intro-text">I'm always excited to connect with fellow travel enthusiasts, readers, and potential collaborators. Whether you have questions about a destination, want travel tips, or simply wish to share your own adventures, I’d love to hear from you.</p>
+      <p class="intro-text">Drop me a message below, and let’s embark on a conversation filled with wanderlust and travel tales!</p>
+
+      <h2>Get in Touch</h2>
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="First Name" required>
+          <input type="text" placeholder="Last Name" required>
+        </div>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Subject" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <div class="profile-right">
+      <div class="about-box">
+        <div class="about-pic"></div>
+        <h1>Asmita Somawar</h1>
+      <P style="color: rgb(139, 141, 141);">Travel blogger</P>
+      <hr style="border: 1px solid rgb(189, 184, 184);">
+  
+        <h2 style="padding-right: 300px;margin-bottom: 10px;">_FollowMe</h2>
+        <div class="social-icons1">
+          <img src="assects/instalogo.png"style="width: 30px;height: 30px;">
+          <img src="assects/facebook.png"style="width: 30px;height: 30px;">
+          <img src="assects/youtubelogo.png"style="width: 30px;height:30px;">
+        <img src="assects/pintrestlogo.png"style="width: 30px;height: 30px;">
+        <img src="assects/xlogo.png"style="width: 30px;height:30px;">
+        </div>
+                  <hr style="border: 1px solid rgb(189, 184, 184);">
+
+          <div class="info">
+            <h3 >__Information</h3>
+            
+            <div class="contact"style="padding-right:500px ;color: rgb(139, 141, 141);margin-top:2px">
+<span class="phone"style="padding-top: 10px;">
+  <img src="assects/phone.png" alt="Phone"> <h4>+919823216450</h4>
+</span>
+<span class="email"><img src="assects/mail.png" alt="Email"><h4>asmitasomawar@gmail.com</h4></span>
+<span class="location"><img src="assects/location.png" alt="Email"><h4>ShivajiNagar,Nanded</h4></span>
+          </div>
+          </div>
+        </div>
+      </div>
+   
+  </section>
+  </main>
+
+<!-- Newsletter Section -->
+ <div class="container3">
+<div class="newsletter">
+    <div class="text-content">
+        <p>Keep in Touch</p>
+        <h1>Explore the World</h1>
+        <div class="subscribe">
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </div>
+    </div>
+    <div class="travel-img">
+        <img src="assects/travel.png" alt="Travel graphic">
+    </div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>Join our community of over 4,000+ readers and get updates on the latest travel guides, itineraries, and travel stories.</p>
+    
+    <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+
+        <div class="social-icons" style="display: flex;gap:5px;">
+          <img src="assects/facebook.png" alt="" srcset="">
+          <img src="assects/instalogo.png" alt="" srcset="">
+            <img src="assects/pintrestlogo.png" alt="" srcset="">
+          <img src="assects/xlogo.png" alt="" srcset="">
+      <img src="assects/youtubelogo.png" alt="" srcset="">
+        </div>
+    </div>
+
+    <div class="bottom-footer">
+        <span>A Product Of <a href="#">Travel Diaries</a></span>
+        <span>All rights reserved</span>
+    </div>
+</footer>
+</body>
+</html>
